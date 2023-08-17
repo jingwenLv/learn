@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        transform-style: preserve-3d;
+        perspective: 500;
+        position: relative;
+        width: 10rem;
+        height: 12rem;
+        transition: all 1s linear;
+      }
+
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+
+      .card div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        text-align: center;
+        line-height: 12rem;
+        font-size: 2rem;
+      }
+
+      .card .just {
+        background-color: #999;
+      }
+
+      .card .back {
+        background-color: lightpink;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="just">？</div>
+      <div class="back">幸运</div>
+    </div>
+  </body>
+</html>

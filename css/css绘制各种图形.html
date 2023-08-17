@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .container>div {
+            margin-left: 80px;
+        }
+
+        .moon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 15px 15px 0 0 red;
+        }
+
+        .yin-yang {
+            width: 96px;
+            box-sizing: content-box;
+            height: 48px;
+            background: #eee;
+            border-color: red;
+            border-style: solid;
+            border-width: 2px 2px 50px 2px;
+            border-radius: 100%;
+            position: relative;
+        }
+
+        .yin-yang:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            background: #eee;
+            border: 18px solid red;
+            border-radius: 100%;
+            width: 12px;
+            height: 12px;
+            box-sizing: content-box;
+        }
+
+        .yin-yang:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: red;
+            border: 18px solid #eee;
+            border-radius: 100%;
+            width: 12px;
+            height: 12px;
+            box-sizing: content-box;
+        }
+
+        #heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+        }
+
+        #heart:before,
+        #heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        #heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+
+        #hexagon {
+            width: 100px;
+            height: 57.735px;
+            background: red;
+            position: relative;
+        }
+
+        #hexagon::before {
+            content: "";
+            position: absolute;
+            top: -28.8675px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 28.8675px solid red;
+        }
+
+        #hexagon::after {
+            content: "";
+            position: absolute;
+            bottom: -28.8675px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 28.8675px solid red;
+        }
+
+        #star-five {
+            margin: 50px 0;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(35deg);
+        }
+
+        #star-five:before {
+            border-bottom: 80px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+
+        #star-five:after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            transform: rotate(-70deg);
+            content: '';
+        }
+
+        #parallelogram {
+            width: 150px;
+            height: 100px;
+            transform: skew(20deg);
+            background: red;
+        }
+
+        #curvedarrow {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 9px solid transparent;
+            border-right: 9px solid red;
+            transform: rotate(10deg);
+        }
+
+        #curvedarrow:after {
+            content: "";
+            position: absolute;
+            border: 0 solid transparent;
+            border-top: 3px solid red;
+            border-radius: 20px 0 0 0;
+            top: -12px;
+            left: -9px;
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+        }
+
+        #triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+        }
+
+        #oval {
+            width: 200px;
+            height: 100px;
+            background: red;
+            border-radius: 100px / 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="moon"></div>
+        <div class="yin-yang"></div>
+        <div id="heart"></div>
+        <div id="hexagon"></div>
+        <div id="star-five"></div>
+        <div id="parallelogram"></div>
+        <div id="parallelogram"></div>
+        <div id="triangle-up"></div>
+        <div id="oval"></div>
+    </div>
+
+</body>
+
+</html>
