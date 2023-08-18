@@ -114,7 +114,7 @@ function reconnect() {
   }
 }
 function completeClose() {
-  //先将心跳与重连的定时器清除
+  // 先将心跳与重连的定时器清除
   clearInterval(heartBeatInterval);
   clearInterval(reconnectInterval);
   heartBeatInterval = null;
